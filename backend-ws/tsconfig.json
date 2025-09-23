@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // Build mode: tsc -b needs this
+    "composite": true,
+
+    // File layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Node ESM settings
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+
+    // Types for Node runtime
+    "types": ["node"],
+
+    // Quality & speed
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+
