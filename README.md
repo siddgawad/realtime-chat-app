@@ -4,8 +4,7 @@ A **full-stack realtime chat application** built with:
 - **Backend** → Node.js, Express, TypeScript, WebSocket (`ws`)  
 - **Frontend** → Next.js 15, TypeScript, TailwindCSS  
 
-🌐 Live demo: [Backend](https://your-backend.onrender.com) | [Frontend](https://your-frontend.vercel.app)
-
+🌐 Live: https://realtime-chat-app-seven-eta.vercel.app/
 ---
 
 ## ✨ Features
