@@ -118,8 +118,6 @@ Copy code
 🔹 **Frontend** → Next.js 15, TailwindCSS, TypeScript (deployed on Vercel)  
 🔹 **Features** → Room-based messaging, connect/disconnect controls, clean modular UI  
 
-Repo: [GitHub link]  
-Live: [Frontend link]  
 
 This project was a deep dive into **WebSocket connections**, handling **realtime messaging**, and deploying a **monorepo (backend + frontend)** to production.  
 
