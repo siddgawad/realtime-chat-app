@@ -35,3 +35,25 @@ npm run build
 
 # start server
 node dist/index.js
+Environment Variables
+Variable	Default	Description
+PORT	3000	Port where HTTP + WS server listens
+
+📡 Example Messages
+Join a room
+
+json
+Copy code
+{ "type": "join", "payload": { "roomId": "general" } }
+Send a chat
+
+json
+Copy code
+{ "type": "chat", "payload": { "roomId": "general", "message": "hello world" } }
+🧪 Testing
+Use Postman or Hoppscotch with ws://localhost:3000.
+Or install wscat:
+
+bash
+Copy code
+npx wscat -c ws://localhost:3000
