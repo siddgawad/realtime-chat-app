@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState} from 'react';
 import type { ConnectionStatus,Message,RoomId,ClientMsg,ChatMsg } from './types';
 
 export default function useChatSocket() {
-    const WS_URL = process.env.URL as string;
+    const WS_URL = process.env.NEXT_PUBLIC_URL as string;
     const [status, setStatus] = useState<ConnectionStatus>('disconnected');
     const wsRef = useRef<WebSocket | null>(null);
     const [currentRoom, setCurrentRoom] = useState<RoomId>('');

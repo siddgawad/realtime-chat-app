@@ -11,7 +11,7 @@ export default function Page() {
   } = useChatSocket();
 
   const isConnected = status === 'connected';
-  const serverUrl = process.env.URL as string;
+  const serverUrl = process.env.NEXT_PUBLIC_URL as string;
 
   return (
     <Shell
