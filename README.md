@@ -1,59 +1,130 @@
-# 🔌 WebSocket Chat Server
+# 💬 Realtime Chat App (WebSockets)
 
-A lightweight **TypeScript + ws** WebSocket server that powers realtime chat rooms.  
-Currently deployed and running live 🚀  
+A **full-stack realtime chat application** built with:
+- **Backend** → Node.js, Express, TypeScript, WebSocket (`ws`)  
+- **Frontend** → Next.js 15, TypeScript, TailwindCSS  
+
+🌐 Live demo: [Backend](https://your-backend.onrender.com) | [Frontend](https://your-frontend.vercel.app)
+
+---
 
 ## ✨ Features
-- Multiple chat rooms (join/leave anytime)  
-- Broadcast messages to everyone in the room  
-- Type-safe message parsing (`join`, `chat`)  
-- Cleanup on disconnect  
-- Simple HTTP health check (`/ → ok`)  
+- 🔌 WebSocket server with room-based messaging  
+- ⚡ Connect/disconnect from client  
+- 💬 Join chat rooms & broadcast messages  
+- 🎨 Modern UI with TailwindCSS  
+- 📦 Modular monorepo structure (backend-ws & frontend-ws)  
+
+---
+
+## 📂 Project Structure
+realtime-chat-app/
+│
+├── backend-ws/ # WebSocket backend (Express + WS)
+│ ├── src/...
+│ ├── package.json
+│ └── tsconfig.json
+│
+├── frontend-ws/ # Next.js frontend (React + Tailwind)
+│ ├── src/app/...
+│ ├── package.json
+│ └── tsconfig.json
+│
+└── README.md # You are here 🚀
+
+yaml
+Copy code
+
+---
 
 ## 🛠️ Tech Stack
-- Node.js + TypeScript  
-- [ws](https://github.com/websockets/ws) WebSocket library  
-- HTTP server for health checks  
+- **Backend**: Node.js, Express, TypeScript, WebSocket (`ws`)  
+- **Frontend**: Next.js 15, TailwindCSS v4, TypeScript  
+- **Deployment**: Render (backend), Vercel (frontend)  
+
+---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 18+  
-- npm  
-
-### Setup
+### 1. Clone the repo
 ```bash
-# clone the repo
-git clone https://github.com/siddgawad/websockets-backend.git
-cd websockets-backend
-
-# install deps
-npm install
-
-# build
-npm run build
-
-# start server
-node dist/index.js
-Environment Variables
-Variable	Default	Description
-PORT	3000	Port where HTTP + WS server listens
-
-📡 Example Messages
-Join a room
-
-json
-Copy code
-{ "type": "join", "payload": { "roomId": "general" } }
-Send a chat
-
-json
-Copy code
-{ "type": "chat", "payload": { "roomId": "general", "message": "hello world" } }
-🧪 Testing
-Use Postman or Hoppscotch with ws://localhost:3000.
-Or install wscat:
-
+git clone https://github.com/siddgawad/realtime-chat-app.git
+cd realtime-chat-app
+2. Backend setup
 bash
 Copy code
-npx wscat -c ws://localhost:3000
+cd backend-ws
+npm install
+npm run dev
+Backend runs on: http://localhost:3003 (HTTP) and ws://localhost:3003 (WebSocket)
+
+3. Frontend setup
+bash
+Copy code
+cd frontend-ws
+npm install
+npm run dev
+Frontend runs on: http://localhost:3000
+
+4. Environment Variables
+Backend (backend-ws/.env)
+ini
+Copy code
+PORT=3003
+Frontend (frontend-ws/.env.local)
+ini
+Copy code
+NEXT_PUBLIC_WS_URL=ws://localhost:3003
+📌 Usage
+Start the backend.
+
+Start the frontend.
+
+Open the frontend in multiple tabs.
+
+Connect → Join a room → Send messages → See realtime chat 🚀
+
+📸 Preview
+Coming soon: screenshots / demo gif
+
+📡 Roadmap
+✅ Multi-room support
+
+✅ Modular monorepo
+
+🔄 Persist chat history (DB integration)
+
+🔄 Authentication + user avatars
+
+🔄 Deployment with HTTPS/WSS
+
+📌 License
+MIT
+
+yaml
+Copy code
+
+---
+
+## 📝 Short Repo Description
+> Full-stack realtime chat app using WebSockets. Backend (Node.js + WS) on Render, frontend (Next.js + Tailwind) on Vercel.
+
+---
+
+## 💼 LinkedIn Post (Combined Project)
+🚀 Excited to share my latest **full-stack project** → a realtime chat app powered by **WebSockets**!  
+
+🔹 **Backend** → Node.js, Express, TypeScript, WS (deployed on Render)  
+🔹 **Frontend** → Next.js 15, TailwindCSS, TypeScript (deployed on Vercel)  
+🔹 **Features** → Room-based messaging, connect/disconnect controls, clean modular UI  
+
+Repo: [GitHub link]  
+Live: [Frontend link]  
+
+This project was a deep dive into **WebSocket connections**, handling **realtime messaging**, and deploying a **monorepo (backend + frontend)** to production.  
+
+Next up: chat persistence, auth, and richer UI features 👀  
+
+#WebSockets #Nextjs #TypeScript #TailwindCSS #FullStack #Render #Vercel  
+
+---
